@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyin ❤️ Sude</title>
+    <style>
+        body { background-color: #ff69b4; color: white; font-family: 'Arial', sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+        h1 { font-size: 2em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        #timer { font-size: 1.1em; font-weight: bold; margin: 20px 0; background: white; color: #ff69b4; padding: 15px; border-radius: 10px; box-shadow: inset 0 0 5px rgba(0,0,0,0.1); }
+        .gallery img { width: 100%; border-radius: 10px; margin-bottom: 15px; border: 3px solid white; display: block; }
+        .map-container { margin-top: 20px; border-radius: 10px; overflow: hidden; border: 2px solid white; }
+        .music-box { background: rgba(255,255,255,0.3); padding: 15px; border-radius: 10px; margin-top: 20px; }
+        audio { width: 100%; }
+        .footer { margin-top: 30px; font-style: italic; font-size: 1em; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Seni Çok Seviyorum Sude... ❤️</h1>
+    <p><i>"Sen benim en güzel hikayemsin, Karacasu'nun en güzel hediyesi..."</i></p>
+    
+    <div id="timer">Aşkımız İçin Zaman Akıyor...</div>
+
+    <div class="gallery">
+        <!-- Fotoğraflarının isimleri img1.jpg, img2.jpg... şeklinde olmalı -->
+        <img src="img1.jpg" alt="Anılarımız">
+        <img src="img2.jpg" alt="Anılarımız">
+        <img src="img3.jpg" alt="Anılarımız">
+        <img src="img4.jpg" alt="Anılarımız">
+        <img src="img5.jpg" alt="Anılarımız">
+    </div>
+
+    <h3>İlk Buluşma Yerimiz: Karacasu 📍</h3>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12702.456!2d28.61!3d37.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c6e!2sKaracasu%2C%20Ayd%C4%B1n" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="music-box">
+        <p style="margin-bottom:10px;">Bizim Şarkımız (Emre Fel) 🎵</p>
+        <audio id="myAudio" controls loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="footer">
+        <p>Benimle bir ömür geçirir misin? 💍</p>
+        <p>❤️ 12.01.2026 ❤️</p>
+    </div>
+</div>
+
+<script>
+    // 12 Ocak 2026 tarihinden itibaren sayar
+    const startDate = new Date("2026-01-12T00:00:00");
+    setInterval(() => {
+        const now = new Date();
+        const diff = now - startDate;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+        document.getElementById("timer").innerHTML = days + " gün " + hours + " saat " + mins + " dakika " + secs + " saniye ❤️";
+    }, 1000);
+</script>
+
+</body>
+</html>
